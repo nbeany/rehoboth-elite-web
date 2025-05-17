@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
@@ -25,10 +26,12 @@ export default function HeroSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-rehoboth-purple hover:bg-rehoboth-purple/90 text-white px-8 py-6 text-lg">
-                Join the Winning Team
+              <Link to="/contact"> Join the Winning Team</Link>
+                
               </Button>
               <Button variant="outline" className="border-rehoboth-silver text-white hover:bg-rehoboth-dark/50 px-8 py-6 text-lg">
-                Partner With Us
+              <Link to="/contact"> Partner With Us</Link>
+              
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
@@ -38,14 +41,14 @@ export default function HeroSection() {
             <div className="relative">
               <div className="w-[500px] h-[600px] rounded-tl-[100px] rounded-br-[100px] overflow-hidden border-2 border-rehoboth-purple/20">
                 <img 
-                  src="https://images.unsplash.com/photo-1485313260896-6e6edf4a1e7b?q=80&w=3113&auto=format&fit=crop" 
+                  src="https://plus.unsplash.com/premium_photo-1721756007521-7ba163989156?q=80&w=2089&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                   alt="Elite Athlete" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-8 -left-8 bg-rehoboth-dark p-6 rounded-lg border border-rehoboth-purple/30 shadow-xl max-w-[260px]">
                 <p className="text-sm text-rehoboth-silver mb-2">CAREER GROWTH</p>
-                <p className="text-2xl font-bold">250+ Elite Athletes Represented</p>
+                <p className="text-2xl font-bold">25+ Elite Athletes Represented</p>
               </div>
             </div>
           </div>

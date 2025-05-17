@@ -67,14 +67,14 @@ export default function Footer() {
           </div>
 
           {/* Legal */}
-          <div>
+          {/* <div>
             <h5 className="text-lg font-bold mb-4">Legal</h5>
             <ul className="space-y-3">
               <li><a href="#" className="text-gray-300 hover:text-rehoboth-purple hover-underline inline-block">Privacy Policy</a></li>
               <li><a href="#" className="text-gray-300 hover:text-rehoboth-purple hover-underline inline-block">Terms of Service</a></li>
               <li><a href="#" className="text-gray-300 hover:text-rehoboth-purple hover-underline inline-block">Cookies Policy</a></li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Bar */}

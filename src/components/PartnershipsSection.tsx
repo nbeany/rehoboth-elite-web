@@ -1,6 +1,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const partners = [
   {
@@ -56,7 +57,8 @@ export default function PartnershipsSection() {
               Rehoboth's extensive network includes relationships with leading companies across apparel, nutrition, media, and technology sectors.
             </p>
             <Button className="group">
-              <span>Become a Partner</span>
+               <Link to="/Partnerships">Become a Partner</Link>
+              
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
@@ -64,7 +66,7 @@ export default function PartnershipsSection() {
           <div className="relative">
             <div className="aspect-[4/3] rounded-tr-[80px] rounded-bl-[80px] overflow-hidden border-2 border-rehoboth-purple/20">
               <img 
-                src="https://images.unsplash.com/photo-1553028826-f4804a6dba3b?q=80&w=2070&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                 alt="Brand Partnership" 
                 className="w-full h-full object-cover"
               />
@@ -102,7 +104,8 @@ export default function PartnershipsSection() {
               </p>
             </div>
             <Button variant="outline" className="border-rehoboth-silver text-white hover:bg-rehoboth-purple/10">
-              View Case Studies
+            <Link to="/Partnerships">View Case Studies</Link>
+             
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>

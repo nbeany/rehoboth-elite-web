@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { ArrowRight, Instagram, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import { Link } from "react-router-dom";
 interface Athlete {
   id: number;
   name: string;
@@ -16,39 +16,55 @@ interface Athlete {
 const athletes: Athlete[] = [
   {
     id: 1,
-    name: "Marcus Johnson",
-    sport: "Track & Field",
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=3174&auto=format&fit=crop",
-    achievements: ["Olympic Gold Medalist", "World Record Holder", "Diamond League Champion"],
+    name: "Freweyni Hailu",
+    sport: "Athletics (Middle-Distance Running)",
+    image: "https://assets.aws.worldathletics.org/large/65e512956330b697dec95fdd.jpg",
+    achievements: ["World Indoor Champion – 1500m (2024)", "World Indoor Champion – 3000m (2025)", "World Indoor Silver Medalist – 800m (2022)","5th Place – 1500m at the 2020 Tokyo Olympics"],
     instagram: "#",
     twitter: "#"
   },
   {
     id: 2,
-    name: "Sophia Williams",
-    sport: "Tennis",
-    image: "https://images.unsplash.com/photo-1595435934344-b9dba3ac0e48?q=80&w=2940&auto=format&fit=crop",
-    achievements: ["Grand Slam Champion", "WTA Top 10", "Billie Jean King Cup Winner"],
+    name: "Ejgayehu Taye",
+    sport: "Athletics (Long-Distance Running)",
+    image: "https://staticg.sportskeeda.com/editor/2022/01/c8b0d-16411206470316-1920.jpg",
+    achievements: ["World Indoor Bronze Medalist – 3000m (2022)", "World Championships Bronze Medalist – 10,000m (2023)", "Former World Record Holder – 5km road race (14:19, 2021–2024)","Silver Medalist – 5000m at the 2018 World U20 Championships"],
     instagram: "#",
     twitter: "#"
   },
   {
     id: 3,
-    name: "Adrian Martinez",
-    sport: "Soccer",
-    image: "https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?q=80&w=2940&auto=format&fit=crop",
-    achievements: ["Champions League Winner", "World Cup Semifinalist", "Golden Boot Award"],
+    name: "Tsige Duguma",
+    sport: "Athletics (Middle-Distance Running)",
+    image: "https://sportnewsafrica.com/wp-content/uploads/2024/03/Frezeyni-scaled.jpg",
+    achievements: ["World Indoor Champion – 800m (2024)", "Olympic Silver Medalist – 800m (2024 Paris Olympics)", "African Games Gold Medalist – 800m (2024)","National Record Holder – 800m (1:56.64, 2025"],
     instagram: "#",
     twitter: "#"
   },
   {
     id: 4,
-    name: "Naomi Chen",
-    sport: "Swimming",
-    image: "https://images.unsplash.com/photo-1560090995-01632a28895b?q=80&w=2940&auto=format&fit=crop",
-    achievements: ["Olympic Gold Medalist", "World Champion", "National Record Holder"],
+    name: "Hirut Meshesha",
+    sport: "Athletics (Middle-Distance Running)",
+    image: "https://sportnewsafrica.com/wp-content/uploads/2022/06/Ligue-de-Diamant-Rabat-Meshesha-Hirut-1500m.jpg",
+    achievements: ["African Games Gold Medalist – 800m (2019)", "World U18 Championships Bronze Medalist – 800m (2017", "World Indoor Bronze Medalist – 1500m (2022)"],
     instagram: "#"
-  }
+  },
+    {
+    id: 5,
+    name: "Diribe Welteji",
+    sport: "Athletics (Middle-Distance Running)",
+    image: "https://trackandfieldnews.com/wp-content/uploads/2019/09/welteji-diribe-10-23.jpg",
+    achievements: ["World Championships Silver Medalist – 1500m (2023)", "World U20 Champion – 800m (2018)", "World U20 Silver Medalist – 1500m (2021)","Jesse Owens Rising Star Award – 2024"],
+    instagram: "#"
+  },
+    {
+    id: 6,
+    name: "Samuel Tefera",
+    sport: "Athletics (Middle-Distance Running)",
+    image: "https://www.sports24ghana.com/wp-content/uploads/2022/03/Samuel-Tefera.jpg",
+    achievements: ["World Indoor Champion – 1500m (2018, 2022)", "Former World Indoor Record Holder – 1500m (3:31.04, 2019)", "African Indoor Record Holder – 1500m"],
+    instagram: "#"
+  },
 ];
 
 export default function AthletesSection() {
@@ -66,7 +82,7 @@ export default function AthletesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {athletes.map((athlete) => (
             <div 
               key={athlete.id}
@@ -91,7 +107,7 @@ export default function AthletesSection() {
 
         <div className="mt-16 text-center">
           <Button className="bg-transparent hover:bg-rehoboth-purple/10 border border-rehoboth-purple text-rehoboth-purple group">
-            <span>View All Athletes</span>
+          <Link to="/Athletes">View All Athletes</Link>
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
         </div>

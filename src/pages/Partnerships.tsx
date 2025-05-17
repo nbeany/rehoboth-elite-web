@@ -66,57 +66,57 @@ const partners = [
 ];
 
 // Case studies
-const caseStudies = [
-  {
-    id: 1,
-    title: "Global Tennis Star & Luxury Watch Brand",
-    description: "A multi-year partnership that transcended traditional sponsorship to create an iconic signature timepiece collection.",
-    image: "https://images.unsplash.com/photo-1595123550441-d377e017de6a?q=80&w=2787&auto=format&fit=crop",
-    results: ["68% increase in brand recognition", "$12M in media value", "4 signature product releases"]
-  },
-  {
-    id: 2,
-    title: "Olympic Sprinter & Sports Nutrition Company",
-    description: "Collaborative product development that resulted in a best-selling performance supplement line backed by athletic excellence.",
-    image: "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=2940&auto=format&fit=crop",
-    results: ["122% YoY sales growth", "Expanded to 28 markets", "5 clinical studies published"]
-  },
-  {
-    id: 3,
-    title: "Soccer Phenomenon & Sustainable Sportswear",
-    description: "Pioneering eco-friendly athletic apparel that set new industry standards while achieving record-breaking sales.",
-    image: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=2434&auto=format&fit=crop",
-    results: ["1.2M units sold in first quarter", "37M social media impressions", "6 sustainability awards"]
-  }
-];
+// const caseStudies = [
+//   {
+//     id: 1,
+//     title: "Global Tennis Star & Luxury Watch Brand",
+//     description: "A multi-year partnership that transcended traditional sponsorship to create an iconic signature timepiece collection.",
+//     image: "https://images.unsplash.com/photo-1595123550441-d377e017de6a?q=80&w=2787&auto=format&fit=crop",
+//     results: ["68% increase in brand recognition", "$12M in media value", "4 signature product releases"]
+//   },
+//   {
+//     id: 2,
+//     title: "Olympic Sprinter & Sports Nutrition Company",
+//     description: "Collaborative product development that resulted in a best-selling performance supplement line backed by athletic excellence.",
+//     image: "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=2940&auto=format&fit=crop",
+//     results: ["122% YoY sales growth", "Expanded to 28 markets", "5 clinical studies published"]
+//   },
+//   {
+//     id: 3,
+//     title: "Soccer Phenomenon & Sustainable Sportswear",
+//     description: "Pioneering eco-friendly athletic apparel that set new industry standards while achieving record-breaking sales.",
+//     image: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=2434&auto=format&fit=crop",
+//     results: ["1.2M units sold in first quarter", "37M social media impressions", "6 sustainability awards"]
+//   }
+// ];
 
-// Partnership types
-const partnershipTypes = [
-  {
-    id: 1,
-    title: "Brand Endorsements",
-    description: "Connect your brand with world-class athletes who embody your values and can authentically advocate for your products or services.",
-    icon: Users
-  },
-  {
-    id: 2,
-    title: "Product Collaborations",
-    description: "Develop signature products with elite athletes that combine performance expertise with innovative design and marketability.",
-    icon: CheckCircle
-  },
-  {
-    id: 3,
-    title: "Media & Content Creation",
-    description: "Create compelling content featuring top athletic talent to engage audiences across multiple platforms and markets.",
-    icon: TrendingUp
-  },
-  {
-    id: 4,
-    title: "Global Event Sponsorships",
-    description: "Align your brand with major sporting events and athlete appearances to maximize visibility on the world stage.",
-    icon: Globe
-  }
-];
+// // Partnership types
+// const partnershipTypes = [
+//   {
+//     id: 1,
+//     title: "Brand Endorsements",
+//     description: "Connect your brand with world-class athletes who embody your values and can authentically advocate for your products or services.",
+//     icon: Users
+//   },
+//   {
+//     id: 2,
+//     title: "Product Collaborations",
+//     description: "Develop signature products with elite athletes that combine performance expertise with innovative design and marketability.",
+//     icon: CheckCircle
+//   },
+//   {
+//     id: 3,
+//     title: "Media & Content Creation",
+//     description: "Create compelling content featuring top athletic talent to engage audiences across multiple platforms and markets.",
+//     icon: TrendingUp
+//   },
+//   {
+//     id: 4,
+//     title: "Global Event Sponsorships",
+//     description: "Align your brand with major sporting events and athlete appearances to maximize visibility on the world stage.",
+//     icon: Globe
+//   }
+// ];
 
 const Partnerships = () => {
   return (
@@ -191,7 +191,7 @@ const Partnerships = () => {
           </div>
         </section>
         
-        {/* Partnership Types */}
+        {/* Partnership Types
         <section className="py-16 bg-gradient-to-b from-rehoboth-dark to-rehoboth-dark/95 text-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -216,9 +216,9 @@ const Partnerships = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
         
-        {/* Case Studies */}
+        {/* Case Studies
         <section className="py-16 bg-rehoboth-dark text-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -227,9 +227,9 @@ const Partnerships = () => {
                 See how we've created multi-million dollar partnerships that have transformed 
                 both athlete careers and brand presence globally.
               </p>
-            </div>
+            </div> */}
             
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {caseStudies.map((study) => (
                 <div key={study.id} className="bg-rehoboth-dark/50 rounded-lg border border-rehoboth-purple/20 overflow-hidden hover-scale">
                   <div className="h-64 overflow-hidden">
@@ -250,8 +250,8 @@ const Partnerships = () => {
                           <span className="text-gray-300">{result}</span>
                         </li>
                       ))}
-                    </ul>
-                    <Button variant="outline" className="w-full border-rehoboth-silver text-white hover:bg-rehoboth-purple/10">
+                    </ul> */}
+                    {/* <Button variant="outline" className="w-full border-rehoboth-silver text-white hover:bg-rehoboth-purple/10">
                       View Full Case Study
                     </Button>
                   </div>
@@ -266,7 +266,7 @@ const Partnerships = () => {
               </Button>
             </div>
           </div>
-        </section>
+        </section> */}
         
         {/* Full Partner Roster */}
         <section className="py-16 bg-gradient-to-b from-rehoboth-dark/95 to-rehoboth-dark text-white">

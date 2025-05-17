@@ -7,152 +7,113 @@ import { Instagram, Twitter, Medal, TrendingUp, X } from "lucide-react";
 
 // Sports filter categories
 const sportCategories = [
-  "All Sports",
-  "Track & Field",
-  "Soccer",
-  "Tennis",
-  "Basketball",
-  "Swimming",
-  "Golf"
+  "All",
+  "Middle-Distance",
+  "Long-Distance",
 ];
 
 // Athlete data
 const athletes = [
+ {
+  "id": 1,
+  "name": "Freweyni Hailu",
+  "sport": "Middle-Distance",
+  "specialty": "1500m & 800m",
+  "image": "https://assets.aws.worldathletics.org/large/65e512956330b697dec95fdd.jpg",
+  "achievements": ["World Indoor Silver Medalist", "Diamond League Contender", "Olympic Finalist"],
+  "stats": [
+    { "label": "PB 1500m", "value": "3:56.28" },
+    { "label": "PB 800m", "value": "1:57.57" },
+    { "label": "World Rank", "value": "Top 10 (1500m)" }
+  ],
+  "bio": "Known for her tactical speed and strong finishing kick, Freweyni is one of Ethiopia’s rising middle-distance stars with major finals under her belt.",
+  "instagram": "#"
+},
+
+ {
+  "id": 2,
+  "name": "Ejgayehu Taye",
+  "sport": "Long-Distance",
+  "specialty": "5000m & 10,000m",
+  "image": "https://staticg.sportskeeda.com/editor/2022/01/c8b0d-16411206470316-1920.jpg",
+  "achievements": ["World Indoor Bronze Medalist", "5km Road World Record Holder", "Diamond League Winner"],
+  "stats": [
+    { "label": "PB 5000m", "value": "14:12.98" },
+    { "label": "PB 10,000m", "value": "29:57.45" },
+    { "label": "5km Road WR", "value": "14:19" }
+  ],
+  "bio": "Ejgayehu’s speed over both track and road distances has earned her global medals and a world record, making her a key figure in long-distance racing.",
+  "instagram": "#"
+},
+
+{
+  "id": 3,
+  "name": "Tsige Duguma",
+  "sport": "Middle-Distance",
+  "specialty": "800m & 1500m",
+  "image": "https://sportnewsafrica.com/wp-content/uploads/2024/03/Frezeyni-scaled.jpg",
+  "achievements": ["African Games Finalist", "National Champion"],
+  "stats": [
+    { "label": "PB 1500m", "value": "4:02.40" },
+    { "label": "PB 800m", "value": "1:59.93" },
+    { "label": "World Rank", "value": "Top 30" }
+  ],
+  "bio": "Tsige is quickly rising in middle-distance circles, impressing with her front-running tactics and consistency across major African and global meets.",
+  "instagram": "#"
+}
+,
+{
+  "id": 4,
+  "name": "Hirut Meshesha",
+  "sport": "Middle-Distance",
+  "specialty": "1500m",
+  "image": "https://sportnewsafrica.com/wp-content/uploads/2022/06/Ligue-de-Diamant-Rabat-Meshesha-Hirut-1500m.jpg",
+  "achievements": ["World Indoor Bronze Medalist", "U20 World Champion", "Diamond League Podiums"],
+  "stats": [
+    { "label": "PB 1500m", "value": "3:57.30" },
+    { "label": "PB 800m", "value": "2:00.18" },
+    { "label": "Pro Since", "value": "2019" }
+  ],
+  "bio": "Hirut’s rapid progress and fierce competitiveness have made her a frequent medalist and a formidable opponent in championship races.",
+  "instagram": "#"
+},
+ {
+  "id": 5,
+  "name": "Diribe Welteji",
+  "sport": "Middle-Distance",
+  "specialty": "1500m & Mile",
+  "image": "https://trackandfieldnews.com/wp-content/uploads/2019/09/welteji-diribe-10-23.jpg",
+  "achievements": ["World Championships Silver Medalist", "Diamond League Winner", "U20 World Champion"],
+  "stats": [
+    { "label": "PB 1500m", "value": "3:53.93" },
+    { "label": "PB Mile", "value": "4:17.13" },
+    { "label": "World Rank", "value": "Top 3 (1500m)" }
+  ],
+  "bio": "Diribe’s combination of youth and experience has already earned her medals at the highest level, with a world title firmly in sight.",
+  "instagram": "#"
+},
   {
-    id: 1,
-    name: "Marcus Johnson",
-    sport: "Track & Field",
-    specialty: "100m Sprint",
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=3174&auto=format&fit=crop",
-    achievements: ["Olympic Gold Medalist", "World Record Holder", "Diamond League Champion"],
-    stats: [
-      { label: "Personal Best", value: "9.82s" },
-      { label: "World Ranking", value: "#2" },
-      { label: "Pro Since", value: "2016" }
-    ],
-    bio: "Marcus is one of the world's premier sprinters, known for his explosive starts and mental toughness in major competitions. His journey from college standout to Olympic champion has inspired a generation of young athletes.",
-    instagram: "#",
-    twitter: "#",
-    featured: true
-  },
-  {
-    id: 2,
-    name: "Sophia Williams",
-    sport: "Tennis",
-    specialty: "All-Court Player",
-    image: "https://images.unsplash.com/photo-1595435934344-b9dba3ac0e48?q=80&w=2940&auto=format&fit=crop",
-    achievements: ["Grand Slam Champion", "WTA Top 10", "Billie Jean King Cup Winner"],
-    stats: [
-      { label: "Career Titles", value: "12" },
-      { label: "World Ranking", value: "#6" },
-      { label: "Pro Since", value: "2014" }
-    ],
-    bio: "Sophia's technical mastery and tactical intelligence have established her as a formidable presence on all court surfaces. Her precise serving and aggressive baseline play have earned her multiple Grand Slam quarterfinal appearances.",
-    instagram: "#",
-    twitter: "#",
-    featured: true
-  },
-  {
-    id: 3,
-    name: "Adrian Martinez",
-    sport: "Soccer",
-    specialty: "Attacking Midfielder",
-    image: "https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?q=80&w=2940&auto=format&fit=crop",
-    achievements: ["Champions League Winner", "World Cup Semifinalist", "Golden Boot Award"],
-    stats: [
-      { label: "Career Goals", value: "187" },
-      { label: "Assists", value: "112" },
-      { label: "Pro Since", value: "2012" }
-    ],
-    bio: "Adrian's creative vision and technical skill have made him one of soccer's most exciting playmakers. Known for his ability to unlock defenses with a single pass, he has become a cornerstone of both his club and national team.",
-    instagram: "#",
-    twitter: "#",
-    featured: true
-  },
-  {
-    id: 4,
-    name: "Naomi Chen",
-    sport: "Swimming",
-    specialty: "Freestyle & Butterfly",
-    image: "https://images.unsplash.com/photo-1560090995-01632a28895b?q=80&w=2940&auto=format&fit=crop",
-    achievements: ["Olympic Gold Medalist", "World Champion", "National Record Holder"],
-    stats: [
-      { label: "Gold Medals", value: "4" },
-      { label: "World Records", value: "2" },
-      { label: "Pro Since", value: "2015" }
-    ],
-    bio: "Naomi's dedication to perfecting her technique has resulted in multiple world records and Olympic success. Her commitment to training and mental preparation has established her as one of swimming's most consistent performers.",
-    instagram: "#",
-    featured: true
-  },
-  {
-    id: 5,
-    name: "David Thompson",
-    sport: "Basketball",
-    specialty: "Point Guard",
-    image: "https://images.unsplash.com/photo-1622599511051-16c55633a2ee?q=80&w=3024&auto=format&fit=crop",
-    achievements: ["NBA Champion", "All-Star Selection", "Olympic Gold Medalist"],
-    stats: [
-      { label: "PPG", value: "22.7" },
-      { label: "Assists", value: "8.3" },
-      { label: "Pro Since", value: "2013" }
-    ],
-    bio: "David combines court vision with scoring ability to dominate games from the point guard position. His leadership qualities and clutch performance have made him a franchise cornerstone and fan favorite.",
-    twitter: "#"
-  },
-  {
-    id: 6,
-    name: "Emma Rodriguez",
-    sport: "Golf",
-    specialty: "Long Drive Specialist",
-    image: "https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?q=80&w=2787&auto=format&fit=crop",
-    achievements: ["Major Champion", "Solheim Cup Winner", "Tour Championship"],
-    stats: [
-      { label: "Tour Wins", value: "9" },
-      { label: "Driving Avg", value: "294yd" },
-      { label: "Pro Since", value: "2017" }
-    ],
-    bio: "Emma's powerful driving and precise iron play have quickly established her as one of golf's rising stars. Her mental toughness in pressure situations has already led to multiple tour victories.",
-    instagram: "#"
-  },
-  {
-    id: 7,
-    name: "Michael Clark",
-    sport: "Track & Field",
-    specialty: "Long Jump",
-    image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=2787&auto=format&fit=crop",
-    achievements: ["World Champion", "Diamond League Winner", "National Record Holder"],
-    stats: [
-      { label: "Personal Best", value: "8.57m" },
-      { label: "World Ranking", value: "#1" },
-      { label: "Pro Since", value: "2015" }
-    ],
-    bio: "Michael has revolutionized the long jump with his unique approach and explosive technique. His consistency and mental preparation have made him the man to beat in every major competition.",
-    twitter: "#",
-    instagram: "#"
-  },
-  {
-    id: 8,
-    name: "Isabella Kim",
-    sport: "Tennis",
-    specialty: "Baseline Player",
-    image: "https://images.unsplash.com/photo-1618354691551-44de113f0164?q=80&w=2130&auto=format&fit=crop",
-    achievements: ["Grand Slam Finalist", "WTA Finals Champion", "Olympic Silver Medalist"],
-    stats: [
-      { label: "Career Titles", value: "7" },
-      { label: "World Ranking", value: "#11" },
-      { label: "Pro Since", value: "2016" }
-    ],
-    bio: "Isabella's aggressive baseline game and mental toughness have established her as one of tennis's most exciting young talents. Her powerful groundstrokes and improved net game have led to consistent results against top players.",
-    instagram: "#"
-  }
+  "id": 6,
+  "name": "Samuel Tefera",
+  "sport": "Middle-Distance",
+  "specialty": "1500m",
+  "image": "https://www.sports24ghana.com/wp-content/uploads/2022/03/Samuel-Tefera.jpg",
+  "achievements": ["World Indoor Champion", "World Indoor Record Holder (1500m)", "Olympic Finalist"],
+  "stats": [
+    { "label": "PB 1500m", "value": "3:31.39" },
+    { "label": "Indoor WR", "value": "3:31.04" },
+    { "label": "Pro Since", "value": "2018" }
+  ],
+  "bio": "Samuel is known for his smooth stride and blistering indoor finishes, with multiple titles and records showing his dominance under pressure.",
+  "instagram": "#"
+},
 ];
 
 const Athletes = () => {
-  const [selectedSport, setSelectedSport] = useState("All Sports");
+  const [selectedSport, setSelectedSport] = useState("All");
   const [selectedAthlete, setSelectedAthlete] = useState<(typeof athletes)[0] | null>(null);
   
-  const filteredAthletes = selectedSport === "All Sports" 
+  const filteredAthletes = selectedSport === "All" 
     ? athletes 
     : athletes.filter(athlete => athlete.sport === selectedSport);
 
@@ -198,13 +159,13 @@ const Athletes = () => {
               </div>
             </div>
             
-            {/* Featured Athletes Section (only show if All Sports or relevant sport selected) */}
-            {(selectedSport === "All Sports" || athletes.some(a => a.sport === selectedSport && a.featured)) && (
+            {/* Featured Athletes Section (only show if All Sports or relevant sport selected)
+            {(selectedSport === "All Sports" || athletes.some(a => a.sport === selectedSport )) && (
               <div className="mb-16">
                 <h3 className="text-2xl font-bold mb-8">Featured Athletes</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                   {filteredAthletes
-                    .filter(athlete => athlete.featured)
+                   
                     .map((athlete) => (
                       <div 
                         key={athlete.id}
@@ -238,13 +199,13 @@ const Athletes = () => {
                 </div>
               </div>
             )}
-            
+             */}
             {/* All Athletes Grid */}
             <div>
               <h3 className="text-2xl font-bold mb-8">
                 {selectedSport === "All Sports" ? "All Athletes" : selectedSport + " Athletes"}
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
                 {filteredAthletes.map((athlete) => (
                   <div 
                     key={athlete.id}
@@ -296,28 +257,28 @@ const Athletes = () => {
                 <div className="grid grid-cols-2 gap-6">
                   <div className="aspect-square rounded-tl-[50px] overflow-hidden">
                     <img 
-                      src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?q=80&w=2029&auto=format&fit=crop" 
+                      src="https://plus.unsplash.com/premium_photo-1664303543960-ce881bfb7e64?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b2x5bXBpY3MlMjAlMjBydW58ZW58MHwwfDB8fHww" 
                       alt="Athlete Training" 
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="aspect-square rounded-tr-[50px] overflow-hidden mt-12">
                     <img 
-                      src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2940&auto=format&fit=crop" 
+                      src="https://images.unsplash.com/photo-1526676537331-7747bf8278fc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG9seW1waWNzJTIwJTIwcnVufGVufDB8MHwwfHx8MA%3D%3D" 
                       alt="Athlete Performance" 
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="aspect-square rounded-bl-[50px] overflow-hidden -mt-12">
                     <img 
-                      src="https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=2940&auto=format&fit=crop" 
+                      src="https://images.unsplash.com/photo-1538061210394-c72c824af0fb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG9seW1waWNzJTIwJTIwcnVufGVufDB8MHwwfHx8MA%3D%3D" 
                       alt="Athlete Media" 
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="aspect-square rounded-br-[50px] overflow-hidden">
                     <img 
-                      src="https://images.unsplash.com/photo-1526401485004-46910ecc8e51?q=80&w=2940&auto=format&fit=crop" 
+                      src="https://images.unsplash.com/photo-1646743934958-ae9d951e5dc4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8MTAwMG0lMjBydW58ZW58MHwwfDB8fHww" 
                       alt="Athlete Competing" 
                       className="w-full h-full object-cover"
                     />
@@ -403,11 +364,11 @@ const Athletes = () => {
                       <Instagram size={20} />
                     </a>
                   )}
-                  {selectedAthlete.twitter && (
+                  {/* {selectedAthlete.twitter && (
                     <a href={selectedAthlete.twitter} className="p-2 rounded-full border border-rehoboth-purple/30 hover:bg-rehoboth-purple/10">
                       <Twitter size={20} />
                     </a>
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>

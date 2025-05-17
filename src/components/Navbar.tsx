@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
+import logo from "../components/LOGO.svg";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,6 +27,7 @@ export default function Navbar() {
     }`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
+       <img src={logo} alt="My Athlete" className="w-12 h-12" />
           <span className="font-playfair text-2xl font-bold text-white">REHOBOTH</span>
           <span className="text-xs text-rehoboth-purple font-semibold tracking-widest">INTERNATIONAL ATHLETICS</span>
         </Link>
@@ -40,9 +41,9 @@ export default function Navbar() {
             <Link to="/partnerships" className="text-white hover-underline">Partnerships</Link>
             <Link to="/contact" className="text-white hover-underline">Contact</Link>
           </div>
-          <Button className="bg-rehoboth-purple hover:bg-rehoboth-purple/90 text-white">
+          {/* <Button className="bg-rehoboth-purple hover:bg-rehoboth-purple/90 text-white">
             Join the Team
-          </Button>
+          </Button> */}
         </div>
 
         {/* Mobile Navigation Toggle */}
@@ -65,9 +66,9 @@ export default function Navbar() {
             <Link to="/athletes" className="text-white text-xl py-2 border-b border-rehoboth-purple/20" onClick={() => setIsMenuOpen(false)}>Athletes</Link>
             <Link to="/partnerships" className="text-white text-xl py-2 border-b border-rehoboth-purple/20" onClick={() => setIsMenuOpen(false)}>Partnerships</Link>
             <Link to="/contact" className="text-white text-xl py-2 border-b border-rehoboth-purple/20" onClick={() => setIsMenuOpen(false)}>Contact</Link>
-            <Button className="bg-rehoboth-purple hover:bg-rehoboth-purple/90 text-white w-full mt-4">
+            {/* <Button className="bg-rehoboth-purple hover:bg-rehoboth-purple/90 text-white w-full mt-4">
               Join the Team
-            </Button>
+            </Button> */}
           </div>
         </div>
       )}

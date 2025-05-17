@@ -10,7 +10,7 @@ export default function AboutSection() {
           <div className="relative">
             <div className="aspect-square rounded-tr-[100px] rounded-bl-[100px] overflow-hidden border-2 border-rehoboth-purple/20">
               <img 
-                src="https://images.unsplash.com/photo-1502904550040-7534597429ae?q=80&w=3269&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1579156618274-5c2d3d06a113?q=80&w=2082&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                 alt="Rehoboth Team" 
                 className="w-full h-full object-cover"
               />
@@ -44,10 +44,10 @@ export default function AboutSection() {
               </div>
             </div>
             
-            <Button className="group">
+            {/* <Button className="group">
               <span>Meet Our Team</span>
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

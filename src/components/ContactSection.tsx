@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -21,13 +20,23 @@ export default function ContactSection() {
           {/* Contact Form */}
           <div className="bg-rehoboth-dark/50 p-8 rounded-lg border border-rehoboth-purple/20">
             <h4 className="text-2xl font-bold mb-6">Send Us a Message</h4>
-            <form className="space-y-6">
+            <form 
+              action="https://formsubmit.co/abrehamnigus1996@gmail.com" 
+              method="POST" 
+              className="space-y-6"
+            >
+              {/* Optional: Prevent spam and redirect after submit */}
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://rehobothathletics.com" />
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium">Name</label>
                   <Input 
                     id="name" 
+                    name="name"
                     placeholder="Your name" 
+                    required
                     className="bg-rehoboth-dark border-rehoboth-purple/30 focus:border-rehoboth-purple" 
                   />
                 </div>
@@ -35,8 +44,10 @@ export default function ContactSection() {
                   <label htmlFor="email" className="text-sm font-medium">Email</label>
                   <Input 
                     id="email" 
+                    name="email"
                     type="email" 
-                    placeholder="Your email" 
+                    placeholder="Your email"
+                    required 
                     className="bg-rehoboth-dark border-rehoboth-purple/30 focus:border-rehoboth-purple" 
                   />
                 </div>
@@ -46,6 +57,7 @@ export default function ContactSection() {
                 <label htmlFor="subject" className="text-sm font-medium">Subject</label>
                 <Input 
                   id="subject" 
+                  name="subject"
                   placeholder="Subject of your message" 
                   className="bg-rehoboth-dark border-rehoboth-purple/30 focus:border-rehoboth-purple" 
                 />
@@ -55,13 +67,15 @@ export default function ContactSection() {
                 <label htmlFor="message" className="text-sm font-medium">Message</label>
                 <Textarea 
                   id="message" 
-                  placeholder="Your message" 
+                  name="message"
                   rows={6}
+                  placeholder="Your message"
+                  required
                   className="bg-rehoboth-dark border-rehoboth-purple/30 focus:border-rehoboth-purple resize-none" 
                 />
               </div>
 
-              <Button className="w-full bg-rehoboth-purple hover:bg-rehoboth-purple/90 text-white">
+              <Button type="submit" className="w-full bg-rehoboth-purple hover:bg-rehoboth-purple/90 text-white">
                 Send Message
               </Button>
             </form>

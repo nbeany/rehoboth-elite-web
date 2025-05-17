@@ -4,36 +4,26 @@ import Footer from "@/components/Footer";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
+import athleteImage from "../pages/TEAMf.jpg";
+import ceo from "../pages/ceo.jpg";
+import manager from "../pages/manager.jpg";
 // Team member data
 const teamMembers = [
-  {
-    id: 1,
-    name: "Sarah Johnson",
-    role: "Founder & CEO",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2376&auto=format&fit=crop",
-    bio: "Former Olympic athlete with 15+ years in sports management and marketing. Founded Rehoboth International Athletics in 2010 with a vision to revolutionize athlete representation."
-  },
+
   {
     id: 2,
-    name: "Marcus Williams",
-    role: "Head of Athlete Relations",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop",
-    bio: "Former professional basketball player with extensive industry connections. Focuses on developing personalized career strategies for each athlete."
+    name: "Yonas Mekonnen",
+    role: "CEO",
+    image:ceo,
+    bio: " professional, with extensive industry connections. Focuses on developing personalized career strategies for each athlete."
   },
-  {
-    id: 3,
-    name: "Elena Rodriguez",
-    role: "Partnerships Director",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2961&auto=format&fit=crop",
-    bio: "Over a decade of experience in brand partnerships and sponsorship negotiations. Has secured over $100M in endorsement deals for our athletes."
-  },
+ 
   {
     id: 4,
-    name: "James Chen",
-    role: "Marketing Strategist",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2787&auto=format&fit=crop",
-    bio: "Award-winning marketer with experience at global sports brands. Specializes in digital presence and personal brand development."
+    name: "Gedion Ephrem",
+    role: "Manager",
+    image: manager,
+    bio: "Award-winning manager with experience at global sports brands. Specializes in digital presence and personal brand development."
   }
 ];
 
@@ -110,11 +100,7 @@ const About = () => {
               
               <div className="relative">
                 <div className="aspect-square rounded-tr-[100px] rounded-bl-[100px] overflow-hidden border-2 border-rehoboth-purple/20">
-                  <img 
-                    src="https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=2670&auto=format&fit=crop" 
-                    alt="Our Story" 
-                    className="w-full h-full object-cover"
-                  />
+                 <img src={athleteImage} alt="My Athlete" />
                 </div>
                 <div className="absolute -bottom-8 -left-8 bg-rehoboth-dark p-6 rounded-lg border border-rehoboth-purple/30 shadow-xl">
                   <p className="text-2xl font-bold">13 Years</p>
@@ -157,10 +143,10 @@ const About = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
               {teamMembers.map((member) => (
                 <div key={member.id} className="bg-rehoboth-dark/50 rounded-lg border border-rehoboth-purple/20 overflow-hidden hover-scale">
-                  <div className="aspect-[3/4]">
+                  <div className="aspect-[5/4]">
                     <img 
                       src={member.image} 
                       alt={member.name} 
@@ -177,10 +163,10 @@ const About = () => {
             </div>
             
             <div className="mt-12 text-center">
-              <Button variant="outline" className="border-rehoboth-silver text-white hover:bg-rehoboth-purple/10 group">
+              {/* <Button variant="outline" className="border-rehoboth-silver text-white hover:bg-rehoboth-purple/10 group">
                 <span>View Full Team</span>
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
+              </Button> */}
             </div>
           </div>
         </section>
